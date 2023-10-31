@@ -1,7 +1,7 @@
 package domain.service;
 
-import domain.CarInfo;
+import domain.StateVinCheck;
 
 public interface MyService {
-    CarInfo getCarInfo(String vin);
+    StateVinCheck getCarInfo(String vin);
 }

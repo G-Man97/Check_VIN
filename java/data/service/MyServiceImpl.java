@@ -2,6 +2,7 @@ package data.service;
 
 import data.repository.MathAlgorithm;
 import domain.CarInfo;
+import domain.StateVinCheck;
 import domain.service.MyService;
 
 import java.util.Optional;
@@ -29,13 +30,18 @@ public class MyServiceImpl implements MyService {
     }
 
     @Override
-    public CarInfo getCarInfo(String vin) {
-        return new CarInfo(
+    public StateVinCheck getCarInfo(String vin) {
+        CarInfo carInfo = new CarInfo(
                 getGlobalManufacturerByIndex(vin.substring(MANUFACTURER_BEGIN_INDEX, MANUFACTURER_END_INDEX)),
                 getCarModelByIndex(vin.substring(CAR_MODEL_BEGIN_INDEX, CAR_MODEL_END_INDEX)),
                 getAssemblyFactoryByIndex(vin.charAt(ASSEMBLY_FACTORY_INDEX)),
                 checkDigit(vin),
                 getProdNumber(vin));
+        if (checkDigit(vin)) {
+            return new StateVinCheck.Success(carInfo);
+        } else {
+            return new StateVinCheck.Error(carInfo, createErrorText(vin));
+        }
     }
 
     private String getGlobalManufacturerByIndex(String index) {
@@ -59,5 +65,10 @@ public class MyServiceImpl implements MyService {
 
     private String getProdNumber(String vin) {
         return vin.substring(PROD_NUMBER_BEGIN_INDEX);
+    }
+
+    private String createErrorText(String vin) {
+        //TODO надо придумать вменяемый текст
+        return "Проверка vin не успешна!";
     }
 }
