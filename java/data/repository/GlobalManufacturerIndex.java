@@ -15,6 +15,7 @@ public class GlobalManufacturerIndex {
         tempMap.put("WUA", "BMW-AG");
         tempMap.put("WUS", "BMW-AG");
         tempMap.put("X4A", "BMW-AG");
+
         GLOBAL_MANUFACTURER_INDEX = Collections.unmodifiableMap(tempMap);
     }
 }

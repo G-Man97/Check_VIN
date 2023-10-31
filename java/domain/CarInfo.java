@@ -20,12 +20,17 @@ public class CarInfo {
         this.prodNumber = prodNumber;
     }
 
+    public String getResultText() {
+        return this.isVinValidate
+                ? "VIN is valid.\n" + this
+                : "VIN is invalid.\n" + this;
+    }
+
     @Override
     public String toString() {
-        return "VIN is valid." + "\n" +
-                "Manufacturer: " + globalManufacturer + ",\n" +
-                "Car model - " + carModel + ",\n" +
-                "Assembly factory - " + assemblyFactory + ",\n" +
-                "Product production number - " + prodNumber;
+        return "Manufacturer: " + globalManufacturer + ",\n" +
+               "Car model - " + carModel + ",\n" +
+               "Assembly factory - " + assemblyFactory + ",\n" +
+               "Product production number - " + prodNumber;
     }
 }

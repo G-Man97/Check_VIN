@@ -10,7 +10,6 @@ public class GetCarInfo {
     }
 
     public String get(String vin) {
-        return service.getCarInfo(vin).toString();
+        return service.getCarInfo(vin).getResultText();
     }
-
 }
