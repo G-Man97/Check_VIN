@@ -1,5 +1,6 @@
 package domain.use_case;
 
+import domain.StateVinCheck;
 import domain.service.MyService;
 
 public class GetCarInfo {
@@ -9,7 +10,7 @@ public class GetCarInfo {
         this.service = service;
     }
 
-    public String get(String vin) {
-        return service.getCarInfo(vin).getResultText();
+    public StateVinCheck get(String vin) {
+        return service.getCarInfo(vin);
     }
 }
