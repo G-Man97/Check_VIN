@@ -20,17 +20,33 @@ public class CarInfo {
         this.prodNumber = prodNumber;
     }
 
-    public String getResultText() {
-        return this.isVinValidate
-                ? "VIN is valid.\n" + this
-                : "VIN is invalid.\n" + this;
+    public String getResultText(StateVinCheck stateVinCheck) {
+        return stateVinCheck instanceof StateVinCheck.Error
+                ? ((StateVinCheck.Error) stateVinCheck).getErrorText() + "\n" + this
+                : "VIN-номер валидный.\n" + this;
+    }
+
+    public String getGlobalManufacturer() {
+        return globalManufacturer;
+    }
+
+    public String getCarModel() {
+        return carModel;
+    }
+
+    public String getAssemblyFactory() {
+        return assemblyFactory;
+    }
+
+    public Boolean getIsVinValidate() {
+        return isVinValidate;
     }
 
     @Override
     public String toString() {
-        return "Manufacturer: " + globalManufacturer + ",\n" +
-               "Car model - " + carModel + ",\n" +
-               "Assembly factory - " + assemblyFactory + ",\n" +
-               "Product production number - " + prodNumber;
+        return "Изготовитель: " + globalManufacturer + ",\n" +
+               "Модель автомобиля: " + carModel + ",\n" +
+               "Сборочный завод: " + assemblyFactory + ",\n" +
+               "Производственный номер изделия: " + prodNumber;
     }
 }

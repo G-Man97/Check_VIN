@@ -1,11 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="GENERAL_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_19">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: dev.inmo:tgbotapi:9.2.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.8.21" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.8.21" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:tgbotapi.core:9.2.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-properties:1.5.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-properties-jvm:1.5.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.soywiz.korlibs.klock:klock:4.0.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.soywiz.korlibs.krypto:krypto:4.0.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.benasher44:uuid:0.7.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.coroutines:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.serialization.base64:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.crypto:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.serialization.encapsulator:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.serialization.typed_serializer:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.serialization.mapper:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.ktor.common:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.common:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-cbor:1.5.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-cbor-jvm:1.5.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-io:2.3.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.language_codes:0.19.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-client-core:2.3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-http:2.3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-utils:2.3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-events:2.3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-websocket-serialization:2.3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-serialization:2.3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-websockets:2.3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:atomicfu:0.19.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:atomicfu-jvm:0.19.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:tgbotapi.api:9.2.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:tgbotapi.utils:9.2.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:tgbotapi.behaviour_builder:9.2.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:tgbotapi.behaviour_builder.fsm:9.2.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: dev.inmo:micro_utils.fsm.common:0.19.9" level="project" />
   </component>
 </module>

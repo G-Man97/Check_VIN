@@ -37,26 +37,35 @@ public class MyServiceImpl implements MyService {
                 getAssemblyFactoryByIndex(vin.charAt(ASSEMBLY_FACTORY_INDEX)),
                 checkDigit(vin),
                 getProdNumber(vin));
-        if (checkDigit(vin)) {
-            return new StateVinCheck.Success(carInfo);
+        if (carInfo.getIsVinValidate()) {
+            if (carInfo.getGlobalManufacturer().startsWith("нет информации")
+                    || carInfo.getCarModel().startsWith("нет информации")
+                    || carInfo.getAssemblyFactory().startsWith("нет информации")) {
+                return new StateVinCheck.Error(carInfo, createErrorText(carInfo.getIsVinValidate()));
+            } else {
+                return new StateVinCheck.Success(carInfo);
+            }
         } else {
-            return new StateVinCheck.Error(carInfo, createErrorText(vin));
+            return new StateVinCheck.Error(carInfo, createErrorText(carInfo.getIsVinValidate()));
         }
     }
 
     private String getGlobalManufacturerByIndex(String index) {
         return Optional.ofNullable(GLOBAL_MANUFACTURER_INDEX.get(index))
-                .orElseThrow(() -> new RuntimeException("No such global manufacturer index"));
+                .orElse("нет информации, возможно, Вы ошиблись при вводе VIN-номера," +
+                        " либо мы не обладаем данными об изготовителе автомобиля");
     }
 
     private String getCarModelByIndex(String index) {
         return Optional.ofNullable(CAR_MODEL.get(index))
-                .orElseThrow(() -> new RuntimeException("No such car model"));
+                .orElse("нет информации, возможно, Вы ошиблись при вводе VIN-номера," +
+                        " либо мы не обладаем данными о модели автомобиля");
     }
 
     private String getAssemblyFactoryByIndex(Character index) {
         return Optional.ofNullable(ASSEMBLY_FACTORY.get(index))
-                .orElseThrow(() -> new RuntimeException("No such assembly factory"));
+                .orElse("нет информации, возможно, Вы ошиблись при вводе VIN-номера," +
+                        " либо мы не обладаем данными о сборочном заводе автомобиля");
     }
 
     private Boolean checkDigit(String vin) {
@@ -67,8 +76,11 @@ public class MyServiceImpl implements MyService {
         return vin.substring(PROD_NUMBER_BEGIN_INDEX);
     }
 
-    private String createErrorText(String vin) {
+    private String createErrorText(Boolean isVinValidated) {
         //TODO надо придумать вменяемый текст
-        return "Проверка vin не успешна!";
+        return isVinValidated
+                ? "VIN-номер валидный, но отсутствует некоторая информация"
+                : "VIN-номер не валидный. Проверьте правильность ввода. Если всё верно, " +
+                "это может означать, что VIN-номер не заводской, а перебитый";
     }
 }

@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gmalykhin.check_vin</groupId>
+  <artifactId>Check_VIN</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Check_VIN</name>
+  <url>https://maven.apache.org</url>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>dev.inmo</groupId>
+      <artifactId>tgbotapi</artifactId>
+      <version>9.2.4</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <finalName>Check_VIN</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+          <configuration>
+              <source>19</source>
+              <target>19</target>
+          </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
