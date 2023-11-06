@@ -20,11 +20,13 @@ public class CarInfo {
         this.prodNumber = prodNumber;
     }
 
+    /*@Deprecated
     public String getResultText(StateVinCheck stateVinCheck) {
+        //TODO Временно для тестов
         return stateVinCheck instanceof StateVinCheck.Error
                 ? ((StateVinCheck.Error) stateVinCheck).getErrorText() + "\n" + this
                 : "VIN-номер валидный.\n" + this;
-    }
+    }*/
 
     public String getGlobalManufacturer() {
         return globalManufacturer;
