@@ -1,4 +1,4 @@
-package data.repository;
+package edu.gmalykhin.server.data.repository;
 
 import java.util.Collections;
 import java.util.Map;

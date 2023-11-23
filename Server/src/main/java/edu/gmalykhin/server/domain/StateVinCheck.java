@@ -1,4 +1,4 @@
-package domain;
+package edu.gmalykhin.server.domain;
 
 public sealed class StateVinCheck {
     protected final CarInfo carInfo;

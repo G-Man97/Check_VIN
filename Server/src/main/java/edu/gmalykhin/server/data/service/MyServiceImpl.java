@@ -1,18 +1,19 @@
-package data.service;
+package edu.gmalykhin.server.data.service;
 
-import data.repository.DataAbout;
-import data.repository.MathAlgorithm;
-import domain.CarInfo;
-import domain.IndexFieldsOfCarInfo;
-import domain.StateVinCheck;
-import domain.service.MyService;
+
+import edu.gmalykhin.server.data.repository.DataAbout;
+import edu.gmalykhin.server.data.repository.MathAlgorithm;
+import edu.gmalykhin.server.domain.CarInfo;
+import edu.gmalykhin.server.domain.IndexFieldsOfCarInfo;
+import edu.gmalykhin.server.domain.StateVinCheck;
+import edu.gmalykhin.server.domain.service.MyService;
 
 import java.util.Collections;
 import java.util.Map;
 
-import static data.repository.AssemblyFactory.ASSEMBLY_FACTORY;
-import static data.repository.CarModel.CAR_MODEL;
-import static data.repository.GlobalManufacturerIndex.GLOBAL_MANUFACTURER_INDEX;
+import static edu.gmalykhin.server.data.repository.AssemblyFactory.ASSEMBLY_FACTORY;
+import static edu.gmalykhin.server.data.repository.CarModel.CAR_MODEL;
+import static edu.gmalykhin.server.data.repository.GlobalManufacturerIndex.GLOBAL_MANUFACTURER_INDEX;
 
 public class MyServiceImpl implements MyService {
 

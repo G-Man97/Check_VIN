@@ -1,4 +1,4 @@
-package domain;
+package edu.gmalykhin.server.domain;
 
 public class CarInfo {
     private final String globalManufacturer;
@@ -18,18 +18,6 @@ public class CarInfo {
         this.assemblyFactory = assemblyFactory;
         this.isVinValidate = isVinValidate;
         this.prodNumber = prodNumber;
-    }
-
-    public String getGlobalManufacturer() {
-        return globalManufacturer;
-    }
-
-    public String getCarModel() {
-        return carModel;
-    }
-
-    public String getAssemblyFactory() {
-        return assemblyFactory;
     }
 
     public Boolean getIsVinValidate() {

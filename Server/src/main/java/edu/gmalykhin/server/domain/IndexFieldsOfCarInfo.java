@@ -1,14 +1,14 @@
-package domain;
+package edu.gmalykhin.server.domain;
 
 import java.util.Map;
 
 public class IndexFieldsOfCarInfo {
     private final String globalManufacturer;
-    private final boolean isGlobalManufacturerAbsent;
+    private final Boolean isGlobalManufacturerAbsent;
     private final String carModel;
-    private final boolean isCarModelAbsent;
+    private final Boolean isCarModelAbsent;
     private final String assemblyFactory;
-    private final boolean isAssemblyFactoryAbsent;
+    private final Boolean isAssemblyFactoryAbsent;
 
     public IndexFieldsOfCarInfo(Map<Boolean, String> globalManufacturerMap,
                                 Map<Boolean, String> carModelMap,
@@ -28,7 +28,7 @@ public class IndexFieldsOfCarInfo {
         return globalManufacturer;
     }
 
-    public boolean isGlobalManufacturerAbsent() {
+    public Boolean isGlobalManufacturerAbsent() {
         return isGlobalManufacturerAbsent;
     }
 
@@ -36,7 +36,7 @@ public class IndexFieldsOfCarInfo {
         return carModel;
     }
 
-    public boolean isCarModelAbsent() {
+    public Boolean isCarModelAbsent() {
         return isCarModelAbsent;
     }
 
@@ -44,7 +44,7 @@ public class IndexFieldsOfCarInfo {
         return assemblyFactory;
     }
 
-    public boolean isAssemblyFactoryAbsent() {
+    public Boolean isAssemblyFactoryAbsent() {
         return isAssemblyFactoryAbsent;
     }
 }

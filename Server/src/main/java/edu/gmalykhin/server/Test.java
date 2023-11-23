@@ -1,5 +1,8 @@
-import data.service.MyServiceImpl;
-import domain.use_case.GetCarInfo;
+package edu.gmalykhin.server;
+
+
+import edu.gmalykhin.server.data.service.MyServiceImpl;
+import edu.gmalykhin.server.domain.use_case.GetCarInfo;
 
 public class Test {
     public static void main(String[] args) {

@@ -1,7 +1,8 @@
-package domain.use_case;
+package edu.gmalykhin.server.domain.use_case;
 
-import domain.StateVinCheck;
-import domain.service.MyService;
+
+import edu.gmalykhin.server.domain.StateVinCheck;
+import edu.gmalykhin.server.domain.service.MyService;
 
 public class GetCarInfo {
     private final MyService service;
